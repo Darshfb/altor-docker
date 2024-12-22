@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sprint 1" parallel="tests">
+    <test name="Validate login to Altoro with valid credentials" preserve-order="false">
+        <parameter name="browserName" value="firefox-headless"/>
+        <classes>
+            <class name="testcases.TC01_Home">
+                <methods>
+                    <include name="validateSignInButtonNavigateToLoginPage"/>
+                </methods>
+            </class>
+            <class name="testcases.TC02_Login">
+                <methods>
+                    <include name="validateLoginWithValidData"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+<!--    <test name="Validate login to Altoro with valid credential" preserve-order="false">-->
+<!--        <parameter name="browserName" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="testcases.TC01_Home">-->
+<!--                <methods>-->
+<!--                    <include name="validateSignInButtonNavigateToLoginPage"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--            <class name="testcases.TC02_Login">-->
+<!--                <methods>-->
+<!--                    <include name="validateLoginWithValidData"/>-->
+<!--                </methods>-->
+<!--            </class>-->
+<!--        </classes>-->
+<!--    </test>-->
+</suite>
